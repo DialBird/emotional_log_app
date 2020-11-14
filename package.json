@@ -7,11 +7,12 @@
     "vdev": "vercel dev",
     "build": "next build",
     "start": "next start",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate": "graphql-codegen -r dotenv/config --config codegen.yml"
   },
   "dependencies": {
     "chart.js": "^2.9.4",
     "clsx": "^1.1.1",
+    "dotenv": "^8.2.0",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
     "next": "10.0.1",

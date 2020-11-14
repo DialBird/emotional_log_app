@@ -1,4 +1,4 @@
-schema: 'https://evolving-tuna-88.hasura.app/v1/graphql'
+schema: ${NEXT_PUBLIC_API_URL}
 documents: ['./src/**/*.tsx', './src/**/*.ts']
 generates:
   src/generated/graphql.ts:
