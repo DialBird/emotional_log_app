@@ -1,6 +1,8 @@
 import gql from 'graphql-tag';
+import * as Urql from 'urql';
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -991,4 +993,30 @@ export type Users_Variance_Fields = {
 export type Users_Variance_Order_By = {
   age?: Maybe<Order_By>;
   id?: Maybe<Order_By>;
+};
+
+export type GetUsersQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetUsersQuery = (
+  { __typename?: 'query_root' }
+  & { users: Array<(
+    { __typename?: 'users' }
+    & Pick<Users, 'id' | 'name' | 'birthday'>
+  )> }
+);
+
+
+export const GetUsersDocument = gql`
+    query GetUsers {
+  users {
+    id
+    name
+    birthday
+  }
+}
+    `;
+
+export function useGetUsersQuery(options: Omit<Urql.UseQueryArgs<GetUsersQueryVariables>, 'query'> = {}) {
+  return Urql.useQuery<GetUsersQuery>({ query: GetUsersDocument, ...options });
 };
