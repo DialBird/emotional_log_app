@@ -1,0 +1,8 @@
+schema: 'https://evolving-tuna-88.hasura.app/v1/graphql'
+documents: ['./src/**/*.tsx', './src/**/*.ts']
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-urql'

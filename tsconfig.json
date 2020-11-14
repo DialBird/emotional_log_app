@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@generatedTypes": ["src/generated/graphql"],
       "@styles/*": ["src/styles/*"]
     }
   },
