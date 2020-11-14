@@ -836,5 +836,5 @@ module.exports = {
     animation: ['responsive'],
   },
   corePlugins: {},
-  plugins: [require('autoprefixer')],
+  plugins: [],
 }
