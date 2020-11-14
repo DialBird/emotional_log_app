@@ -1,7 +1,9 @@
+import { GraphCanvas } from '@components/atoms/GraphCanvas'
 import { Layout } from '@components/templates/Layout'
 import { GetUsersQuery, GetUsersQueryVariables } from '@generatedTypes'
 import clsx from 'clsx'
 import gql from 'graphql-tag'
+import { useRef } from 'react'
 import { useQuery } from 'urql'
 
 const UsersQuery = gql`
@@ -37,6 +39,7 @@ export default function Main() {
           </li>
         ))}
       </ul>
+      <GraphCanvas />
     </Layout>
   )
 }
