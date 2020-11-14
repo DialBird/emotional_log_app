@@ -1,7 +1,10 @@
+import { Layout } from '@components/templates/Layout'
+import clsx from 'clsx'
+
 export default function Main() {
   return (
-    <div>
-      <h1>main</h1>
-    </div>
+    <Layout>
+      <h1 className={clsx('text-center')}>main</h1>
+    </Layout>
   )
 }
