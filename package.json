@@ -10,6 +10,7 @@
     "generate": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "clsx": "^1.1.1",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
